@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.util.Locale;
 
-public class PRA105_2510817220019_TYSALUTHFIA {
+public class PRAK105_2510817220019_TYSALUTHFIA {
 	public static final double PI = 3.14;
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);

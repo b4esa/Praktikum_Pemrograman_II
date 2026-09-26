@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PRA103_2510817220019_TYSALUTHFIA {
+public class PRAK103_2510817220019_TYSALUTHFIA {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.print("");

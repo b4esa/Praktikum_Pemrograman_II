@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class PRAK101_2510817220019_TYSALUTHFIA {
+public class PRAKk101_2510817220019_TYSALUTHFIA {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);

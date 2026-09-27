@@ -9,7 +9,7 @@ public class PRAK102_2510817220019_TYSALUTHFIA {
 		int number = startnumber;
 		int counter = 0;
 
-		while (counter < 11) {
+		while (counter < 10) {
 			if (number % 5 == 0) {
 				int result = (number / 5) - 1;
 				System.out.print(result);

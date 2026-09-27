@@ -1,9 +1,11 @@
 import java.util.Scanner;
+import java.util.Locale;
 
 public class PRAK101_2510817220019_TYSALUTHFIA {
 
 	public static void main(String[] args) {
 		Scanner scan = new Scanner(System.in);
+		scan.useLocale(Locale.US);
 
 		System.out.print("Masukkan Nama Lengkap: ");
 		String namaLengkap = scan.nextLine();
@@ -11,14 +13,45 @@ public class PRAK101_2510817220019_TYSALUTHFIA {
 		System.out.print("Masukkan Tempat Lahir: ");
 		String tempatLahir = scan.nextLine();
 
-		System.out.print("Masukkan Tanggal Lahir: ");
-		int tanggalLahir = scan.nextInt();
+		int tanggalLahir, bulanLahir, tahunLahir;
+		boolean tanggalValid = false;
 
-		System.out.print("Masukkan Bulan Lahir: ");
-		int bulanLahir = scan.nextInt();
+		do {
+			System.out.print("Masukkan Tanggal Lahir: ");
+			tanggalLahir = scan.nextInt();
 
-		System.out.print("Masukkan Tahun Lahir: ");
-		int tahunLahir = scan.nextInt();
+			System.out.print("Masukkan Bulan Lahir: ");
+			bulanLahir = scan.nextInt();
+
+			System.out.print("Masukkan Tahun Lahir: ");
+			tahunLahir = scan.nextInt();
+
+			if (tahunLahir > 0 && bulanLahir >= 1 && bulanLahir <= 12) {
+				int batasHari = 31;
+
+				if (bulanLahir == 4 || bulanLahir == 6 || bulanLahir == 9 || bulanLahir == 11) {
+					batasHari = 30;
+				}
+
+				else if (bulanLahir == 2) {
+					if ((tahunLahir % 4 == 0 && tahunLahir % 100 != 0) || (tahunLahir % 400 == 0)) {
+						batasHari = 29;
+					} else {
+						batasHari = 28;
+					}
+				}
+
+
+				if (tanggalLahir >= 1 && tanggalLahir <= batasHari) {
+					tanggalValid = true;
+				}
+			}
+
+			if (!tanggalValid) {
+				System.out.println("Input kalender tidak valid! Perhatikan batas hari atau tahun kabisat. Silakan Coba Lagi.\n");
+			}
+
+		} while (!tanggalValid);
 
 		int tinggiBadan;
 		double beratBadan;
@@ -29,7 +62,7 @@ public class PRAK101_2510817220019_TYSALUTHFIA {
 			if (tinggiBadan <= 0) {
 				System.out.println("Coba Lagi");
 			}
-		}while (tinggiBadan <=0);
+		} while (tinggiBadan <= 0);
 
 		do {
 			System.out.print("Masukkan Berat Badan: ");
@@ -37,10 +70,10 @@ public class PRAK101_2510817220019_TYSALUTHFIA {
 			if (beratBadan <= 0) {
 				System.out.println("Coba Lagi");
 			}
-		}while (beratBadan <= 0);
+		} while (beratBadan <= 0);
 
 		String[] namaBulanArray = {
-				"januari", "Februari", "Maret", "April", "Mei", "Juni",
+				"Januari", "Februari", "Maret", "April", "Mei", "Juni",
 				"Juli", "Agustus", "September", "Oktober", "November", "Desember"
 		};
 
@@ -51,5 +84,4 @@ public class PRAK101_2510817220019_TYSALUTHFIA {
 
 		scan.close();
 	}
-
 }

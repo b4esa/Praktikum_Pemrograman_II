@@ -1,3 +1,5 @@
+package Modul1;
+
 import java.util.Scanner;
 
 public class PRAK104_2510817220019_TYSALUTHFIA {

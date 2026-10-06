@@ -1,25 +1,29 @@
+package Modul1;
+
 import java.util.Scanner;
 
-public class PRAK103_2510817220019_TYSALUTHFIA {
+public class PRAK102_2510817220019_TYSALUTHFIA {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.print("");
-		int n =  input.nextInt();
 		int startnumber = input.nextInt();
 
 		int number = startnumber;
 		int counter = 0;
 
-		do {
-			if(number % 2 != 0) {
+		while (counter < 10) {
+			if (number % 5 == 0) {
+				int result = (number / 5) - 1;
+				System.out.print(result);
+			} else {
 				System.out.print(number);
-				counter++;
+			}
 
-				if(counter < n) {
-					System.out.print(", ");
-				}
+			if (counter < 10) {
+				System.out.print(", ");
 			}
 			number++;
-		} while (counter < n);
+			counter++;
+		}
 	}
 }
